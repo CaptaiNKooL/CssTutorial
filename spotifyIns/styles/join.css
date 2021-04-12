@@ -1,0 +1,257 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #2f303a;
+  color: white;
+  font-size: 1.1rem;
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 400;
+  background-image: linear-gradient(
+    to top,
+    rgba(139, 68, 143, 1),
+    rgb(84, 84, 172)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  border-bottom: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-right: 100px;
+  text-align: center;
+}
+
+ul a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+ul a:hover::after {
+  width: 50%;
+}
+
+a:hover {
+  color: #adadad;
+}
+
+.header {
+  height: 140px;
+}
+
+nav {
+  margin-top: 30px;
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  margin-right: 10px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+form {
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  border-left: 1px solid rgba(255, 255, 255, .5);
+  min-height: 50vh;
+  border-radius: 10px;
+  width: 35%;
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+
+
+form .title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.field {
+  margin: 7% 7%;
+}
+
+.field input {
+  border-color: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #b4becb;
+  width: 80%;
+  padding: 3px;
+  font-size: 16px;
+  color: white;
+}
+
+.cvv {
+  width: 10%;
+}
+
+.expiry-date input {
+  color: white;
+}
+
+.field input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.btn {
+  background-color: transparent;
+  max-width: 8rem;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.circle1 {
+  position: absolute;
+  background-color: rgba(188, 58, 128, .1);
+  top: 50vh;
+  left: 10vw;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle2 {
+  position: absolute;
+  background-color: rgb(52, 87, 178, .1);
+  top: 20vh;
+  left: 40vw;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle3 {
+  position: absolute;
+  background-color: rgb(52, 87, 178, .1);
+  top: 50vh;
+  left: 70vw;
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  min-height: 80px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  margin-left: 50px;
+  margin-top: 10%;
+}
+
+.social-media {
+  display: flex;
+}
+
+.media1,
+.media2 {
+  display: flex;
+  margin: 0 20px;
+}
+
+.media1 a,
+.media2 a {
+  margin-left: 10px;
+}
+
+span {
+  color: rgb(188, 58, 128, 1);
+  font-size: 5rem;
+}
+
+.text {
+  animation: funRotate 1s alternate linear infinite;
+  transform-origin: top;
+  position: relative;
+}
+
+.text svg {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes funRotate {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(10deg);
+  }
+}
+
+

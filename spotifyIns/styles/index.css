@@ -1,0 +1,192 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #2f303a;
+  color: white;
+  font-size: 1.1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.full-height-grow {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-weight: 400;
+  background-image: linear-gradient(
+    to top,
+    rgba(139, 68, 143, 1),
+    rgb(84, 84, 172)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-right: 100px;
+  text-align: center;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width .5s ease;
+}
+
+nav a:hover::after{
+    width: 50%;
+}
+
+a:hover {
+  color: #adadad;
+}
+
+.header {
+  height: 140px;
+}
+
+nav {
+  margin-top: 30px;
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  margin-right: 10px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+main {
+  display: flex;
+
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.img-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: 80vh;
+  max-width: 30vw;
+}
+
+.girl {
+  background-image: url(../images/landing-page-girl.png);
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-self: flex-end;
+  height: 85%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 1rem;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.sub-title {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin: 3rem 0;
+}
+
+.btn {
+  /* background-color: rgb(23, 98, 167); */
+  background: linear-gradient(45deg, rgb(23, 98, 167) 50%, white 50% );
+  background-size: 200% 100%;
+  background-position: left;
+  max-width: 8rem;
+  border-radius: 10px;
+  padding: 15px 20px;
+  animation: opacityChange 1s linear alternate infinite;
+  transition: background-position 1s linear;
+}
+
+.btn:hover{
+  background-position: right;
+  color: black;
+}
+
+.circle1 {
+  position: absolute;
+  background-color: rgb(188, 58, 128, 0.1);
+  top: 50vh;
+  left: 10vw;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  z-index: -1;
+  
+}
+
+.circle2 {
+  position: absolute;
+  background-color: rgb(52, 87, 178, 0.1);
+  top: 20vh;
+  left: 40vw;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle3 {
+  position: absolute;
+  background-color: rgb(52, 87, 178, 0.1);
+  top: 50vh;
+  left: 70vw;
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+}
+
+
+@keyframes opacityChange {
+  from{
+    color: white;
+    font-weight: 300;
+  }to{
+    color: black;
+    font-weight: 500;
+  }
+}
